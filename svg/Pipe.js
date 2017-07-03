@@ -10,7 +10,7 @@ const Pipe = ({ customWidth = 100, customHeight = 2, ...props }) => {
 
       <g>
         <rect fill={variables.denim} x="0" y="0" width={movingPipeLength} height={customHeight} />
-        <animateMotion dur="1s" repeatCount="indefinite">
+        <animateMotion dur="2s" repeatCount="indefinite">
           <mpath xlinkHref="#pipeMotionPath" />
         </animateMotion>
       </g>

@@ -17,8 +17,8 @@ import {
   Screen,
   PortraitScreen
 } from './svg'
-
-const qs = (s) => document.querySelector(s)
+import variables from './variables'
+import { qs } from './helpers'
 
 export default class App extends Component {
   componentDidMount () {
@@ -89,7 +89,11 @@ export default class App extends Component {
             <Headline id="headline" opacity="0" transform="translate(335, 80), scale(1.5)" />
             <Image id="image" opacity="0" transform="translate(335, 105), scale(1.5)" />
             <Document id="document" opacity="0" transform="translate(390, 105), scale(1.5)" />
-            <Video id="video" opacity="0" transform="translate(430, 67), scale(1.5)" />
+
+            <g id="video" opacity="0" transform="translate(430, 67), scale(1.5)">
+              <rect x="0" y="1" width="24" height="42" fill={variables.lightSkyBlue} />
+              <Video />
+            </g>
 
             <g id="iconGroup" transform="translate(310, -35), scale(1.3)">
               <TextIcon id="textIcon" opacity="1" transform="translate(45, 70), rotate(-10), scale(1.5)" />
@@ -99,7 +103,7 @@ export default class App extends Component {
             </g>
           </g>
 
-          <Pipe id="topPipe" opacity="0" transform="translate(320, 100)" customWidth={'284'} />
+          <Pipe id="topPipe" opacity="0" transform="translate(305, 100)" customWidth={'315'} />
           <VerticalPipe id="lowPipe" opacity="0" transform="translate(480, 102)" customHeight={'40'} />
 
           <Screen id="screen" opacity="0" transform="scale(2.5), translate(140, 80)" />

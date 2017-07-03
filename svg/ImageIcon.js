@@ -1,5 +1,5 @@
 const ImageIcon = (props) => (
-  <g {...props} width="32" height="42" viewBox="0 0 32 42" fill-rule="nonzero" fill="none">
+  <g {...props} fill-rule="nonzero" fill="none">
     <path fill="#90CAF9" d="M32 42H0V0h22l10 10" /><path fill="#E1F5FE" d="M30.5 11H21V1.5" />
 
     <g transform="translate(6 20)"><path fill="#1565C0" d="M7 0L0 10h14" />
