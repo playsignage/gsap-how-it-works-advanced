@@ -12,7 +12,10 @@ import {
   Laptop,
   LaptopContents,
   Video,
-  Pipe
+  Pipe,
+  VerticalPipe,
+  Screen,
+  PortraitScreen
 } from './svg'
 
 const qs = (s) => document.querySelector(s)
@@ -31,6 +34,10 @@ export default class App extends Component {
     const documentDOM = qs('#document')
     const videoDOM = qs('#video')
     const editorDOM = qs('#editor')
+    const topPipeDOM = qs('#topPipe')
+    const lowPipeDOM = qs('#lowPipe')
+    const screenDOM = qs('#screen')
+    const portraitScreenDOM = qs('#portraitScreen')
 
     const timeline = new TimelineLite()
 
@@ -60,7 +67,13 @@ export default class App extends Component {
       .to(videoIconDOM, 2, { opacity: 0, rotation: 0, scale: 1, ease: SlowMo.easeOut, x: 230, y: 210 }, 'headline+=1.5')
       .to(videoDOM, 1, { opacity: 1, ease: SlowMo.easeOut }, 'headline+=1.5')
 
-      .to(editorDOM, 0.5, { x: -200, ease: SlowMo.easeOut })
+      .to(editorDOM, 0.5, { x: -207, ease: SlowMo.easeOut })
+
+      .to(topPipeDOM, 2, { opacity: 1 })
+      .to(portraitScreenDOM, 1, { opacity: 1, x: 630, ease: SlowMo.easeOut })
+
+      .to(lowPipeDOM, 2, { opacity: 1 })
+      .to(screenDOM, 1, { opacity: 1, y: 149, ease: SlowMo.easeOut })
 
     timeline.timeScale(4)
   }
@@ -68,8 +81,8 @@ export default class App extends Component {
   render () {
     return (
       <main>
-        <svg viewBox="0 0 768 300">
-          <g id="editor">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+          <g id="editor" transform="translate(0 40)">
             <Laptop id="laptop" opacity="1" transform="translate(200, 30), scale(1.5)" />
             <LaptopContents id="laptopContents" opacity="0" transform="translate(291.5, 31.5), scale(1.5)" />
 
@@ -86,7 +99,12 @@ export default class App extends Component {
             </g>
           </g>
 
-          <Pipe transform="translate(310, 50)" customWidth={'200'} />
+          <Pipe id="topPipe" opacity="0" transform="translate(320, 100)" customWidth={'284'} />
+          <VerticalPipe id="lowPipe" opacity="0" transform="translate(480, 102)" customHeight={'40'} />
+
+          <Screen id="screen" opacity="0" transform="scale(2.5), translate(140, 80)" />
+
+          <PortraitScreen id="portraitScreen" opacity="0" transform="scale(2.5), translate(260, 12)" />
         </svg>
       </main>
     )
