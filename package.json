@@ -13,9 +13,6 @@
   "keywords": [],
   "author": "Dan Mindru <mindrudan@gmail.com> (http://mindrudan.com/)",
   "license": "ISC",
-  "eslintConfig": {
-    "extends": "eslint-config-synacor"
-  },
   "devDependencies": {
     "eslint": "^4.1.1",
     "eslint-config-synacor": "^1.0.1",
@@ -25,6 +22,7 @@
     "sass-loader": "^6.0.6"
   },
   "dependencies": {
+    "gsap": "^1.20.2",
     "preact": "^8.1.0",
     "preact-compat": "^3.16.0",
     "preact-router": "^2.5.2"
