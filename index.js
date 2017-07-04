@@ -1,4 +1,3 @@
-import './style.scss'
 import { Component } from 'preact'
 import { TimelineLite, SlowMo, Power2 } from 'gsap'
 import {
