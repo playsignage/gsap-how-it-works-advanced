@@ -7,9 +7,13 @@
 
 ## Getting started
 ```bash
+npm i
 preact watch # develop
 preact build # publish
 ```
+
+## ⚠️ Requirements
+Node v8
 
 
 ## Made with ❤️ by Play Digital Signage.
