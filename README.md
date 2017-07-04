@@ -8,8 +8,8 @@
 ## Getting started
 ```bash
 npm i
-preact watch # develop
-preact build # publish
+npm run dev # develop
+npm run build # publish
 ```
 
 ## ⚠️ Requirements

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "eslint . && preact test",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "build": "preact build",
+    "build": "preact build --template=template.html",
     "serve": "preact build && preact serve",
     "dev": "preact watch",
     "deploy": "git push origin `git subtree split --prefix build master`:gh-pages --force"
