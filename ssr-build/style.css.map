@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///webpack:///style.scss"],"names":[],"mappings":"AAAA,KACC,qDACA,oEACA,iEAAmB,CAHpB,SAME,YAAa","file":"style.css","sourcesContent":["main {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\t& > svg {\n\t\theight: 300px;\n\t}\n}\n\n\n\n// WEBPACK FOOTER //\n// webpack:///style.scss"],"sourceRoot":""}
