@@ -1,4 +1,4 @@
-# Play Digital Signage: How to advanced animation
+# Play Digital Signage: How it works (advancedish animation concept)
 
 ## What's inside
 - [x] gsap
