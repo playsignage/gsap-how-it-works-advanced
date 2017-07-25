@@ -13,7 +13,8 @@ npm run build # publish
 ```
 
 ## ⚠️ Requirements
-Node v8
+- Node v8
+- Chrome only for now
 
 
 ## Made with ❤️ by Play Digital Signage.
